@@ -1,0 +1,20 @@
+# Workflow automatically executed to check if a pull request has label `status: in progress` to prevent
+# merging incomplete work
+
+name: Check label in-progress to prevent merging
+
+on:
+  pull_request_target:
+    types: [synchronize, opened, reopened, labeled, unlabeled]
+
+jobs:
+  do-not-merge:
+    if: "${{ contains(github.event.*.labels.*.name, 'status: in progress') }}"
+    name: Check do not merge
+    runs-on: ubuntu-latest
+    steps:
+      - name: check for label
+        run: |
+          echo "Pull request is labeled as 'status: in progress'"
+          echo "This workflow fails to prevent merging"
+          exit 1
