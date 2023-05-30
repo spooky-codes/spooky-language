@@ -1,18 +1,8 @@
-# Rust project template
+# Spooky Language Repository
 
-This Rust project template provides a pre-configured (and probably a bit opinionated) project with all necessary tools to enforce good coding practices.
+`Spooky` is a next-wave quantum programming idiom that draws its formalism and foundations from [homotopy type theory](https://homotopytypetheory.org/) and [higher inductive types](https://ncatlab.org/nlab/show/higher+inductive+type#:~:text=Higher%20inductive%20types%20(HITs)%20are,of%20its%20iterated%20identity%20types.).
 
-## How to use this project template
-
-In order to use this Rust project template, here are the steps to follow:
-
-- **Create your repo**: start by [creating a new repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) from this template for your project, giving the latter a new name.
-
-- **Set your project's title**: replace the title of this REAMDE.md file, with the name of your new project.
-
-- **Set your Git username and email**: so that to put a name on a contribution and be able to contact the author, please [set your Git username and email](https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git).
-
-- ... more to come
+This documentation is embryonic and will be improved in the future.
 
 ## How can I contribute to this project
 
@@ -32,7 +22,7 @@ The second question you are probably asking yourself is "how can I be of help to
 
 The next concrete step is to take the plunge by picking one the outstanding tasks on the project's management board. For doing so, please bump to the [Getting started](./CONTRIBUTOR_BIBLE.md) paragraph of our `Contributor's Bible`.
 
-If none of the above resonates with you, do not hesitate to send us an email at `community@sofair.io`. You are sure to meet an open tribe eager to accept new ideas or contributions. Don't be shy!
+If none of the above resonates with you, do not hesitate to send us an email at `contributors@spooky.codes`. You are sure to meet an open tribe eager to accept new ideas or contributions. Don't be shy!
 
 ## Licenses and copyright
 
