@@ -4,6 +4,17 @@ target/
 artifacts/
 build/
 
+# Nix junks
+result
+result-*
+
+# Devenv setup
+.devenv*
+.pre-commit-config.yaml
+
+# Direnv cache folder
+.direnv
+
 # Sample examples
 samples/
 

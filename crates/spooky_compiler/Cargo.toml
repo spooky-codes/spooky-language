@@ -1,0 +1,73 @@
+[package]
+name = "spooky_compiler"
+description = "Language compiler and console (or CLI)"
+version = "0.0.0-semver"
+
+keywords = [
+  "Spooky",
+  "quantum-programming",
+  "quantum-programming-language",
+  "quantum-circuit",
+  "quantum-circuit-synthesis",
+  "quantum-program-verification",
+  "linear-dependent-types",
+  "homotopy-type-theory",
+  "higher-inductive-types",
+]
+
+categories = [
+  "Programming language",
+  "Compiler",
+  "Type checker",
+  "Quantum programming",
+  "Command line interface",
+  "Console",
+]
+
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+documentation.workspace = true
+homepage.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Targets configuration
+# ---------------------------------------------------------------------------------------------------------------------
+
+# Library target settings
+[lib]
+name = "spooky_compiler"              # Target name (final name will be libspooky_compiler)
+path = "src/lib.rs"                   # Target's source file path
+test = true                           # Target must be tested by default
+doctest = false                       # Documentation examples are tested by default
+bench = true                          # Target must be benchmarked by default
+doc = true                            # Library is documented by default.
+crate-type = ["lib"]                  # Target's crate types to be generated
+
+# Compiler application executable
+[[bin]]
+name = "spooky"
+path = "src/application/main.rs"
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Package features
+# ---------------------------------------------------------------------------------------------------------------------
+
+[features]
+
+default = []
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Package dependencies
+# ---------------------------------------------------------------------------------------------------------------------
+
+[dependencies]
+
+# Local dependencies
+spooky_parser = { workspace = true }
+
+# Errors and logs processing
+log = { workspace = true }
+thiserror = { workspace = true }
