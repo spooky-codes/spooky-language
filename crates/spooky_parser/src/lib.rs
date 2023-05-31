@@ -14,6 +14,6 @@ mod tests {
     #[test]
     fn it_works() {
         let result = parse();
-        assert_eq!(result, true);
+        assert!(result);
     }
 }
