@@ -1,9 +1,9 @@
 pub fn parse() -> bool {
     if spooky_lexer::tokenize() {
         println!("Fake parsing method");
-        return true;
+        true
     } else {
-        return false;
+        false
     }
 }
 

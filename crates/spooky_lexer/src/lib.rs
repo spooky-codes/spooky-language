@@ -1,6 +1,6 @@
 pub fn tokenize() -> bool {
     println!("Fake tokenizing method");
-    return true;
+    true
 }
 
 #[cfg(test)]
