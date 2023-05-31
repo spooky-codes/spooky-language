@@ -1,20 +1,39 @@
 [workspace]
 
 members = [
-  "crates/greeter_cli",
-  "crates/greeter_service",
-  "crates/greeter_mock"
+  "crates/*"
 ]
 
-# Global package attributes
+# ---------------------------------------------------------------------------------------------------------------------
+# Shared workspace-wide package attributes
+# ---------------------------------------------------------------------------------------------------------------------
+
 [workspace.package]
-authors = ["Sofair Contributors <info@sofair.io>"]
+authors = ["Spooky Contributors <contributors@spooky.codes>"]
 license = "MIT or Apache-2.0"
-documentation = "https://documents.sofair.io/[new_project_name]"
-homepage = "https://projects.sofair.io/[new_project_name]"
-repository = "https://github.com/SofairOfficial/[new_project_name]"
+documentation = "https://spooky.codes"
+homepage = "https://spooky.codes"
+repository = "https://github.com/spooky-codes/spooky-language"
 edition = "2021"
-rust-version = "1.67"
+rust-version = "1.69"
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Shared workspace-wide package dependencies
+# ---------------------------------------------------------------------------------------------------------------------
+
+[workspace.dependencies]
+
+# Local packages
+spooky_lexer = { version = "0.0.0-semver", path = "crates/spooky_lexer" }
+spooky_parser = { version = "0.0.0-semver", path = "crates/spooky_parser" }
+
+# Errors and logs processing packages
+log = { version = "0.4.17" }
+thiserror = { version = "1.0.38" }
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Release profiles definition
+# ---------------------------------------------------------------------------------------------------------------------
 
 [profile.release]
 lto = true
